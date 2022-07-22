@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-22T23:20:54.640Z",
+    "end": "2022-07-22T23:21:03.014Z",
+    "duration": 8374,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3da6bc86-b6d0-40a7-9a06-7169a8056fa4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\project.cy.js",
+      "file": "cypress\\e2e\\project.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5802a519-0002-4a59-812e-378b2232117b",
+          "title": "Tela de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "usuario valido",
+              "fullTitle": "Tela de login usuario valido",
+              "timedOut": null,
+              "duration": 1390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('standard_user', 'secret_sauce');\ncy.contains('span', 'Products').should('be.visible');",
+              "err": {},
+              "uuid": "f58f2acb-ebda-4fdc-b633-5d19dabfb7c1",
+              "parentUUID": "5802a519-0002-4a59-812e-378b2232117b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "usuario nome invalido",
+              "fullTitle": "Tela de login usuario nome invalido",
+              "timedOut": null,
+              "duration": 1185,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('maria', 'secret_sauce');\ncy.contains('h3', 'Epic sadface: Username and password do not match any user in this service').should('be.visible');",
+              "err": {},
+              "uuid": "342d38e8-12c1-4ec8-9fa7-0918d5d3dddb",
+              "parentUUID": "5802a519-0002-4a59-812e-378b2232117b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "usuario senha invalida",
+              "fullTitle": "Tela de login usuario senha invalida",
+              "timedOut": null,
+              "duration": 983,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('standard_user', '123456');\ncy.contains('h3', 'Epic sadface: Username and password do not match any user in this service').should('be.visible');",
+              "err": {},
+              "uuid": "825306c9-6fe4-4549-b6de-3ed601114051",
+              "parentUUID": "5802a519-0002-4a59-812e-378b2232117b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "usuario compra produto",
+              "fullTitle": "Tela de login usuario compra produto",
+              "timedOut": null,
+              "duration": 2594,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('standard_user', 'secret_sauce');\ncy.contains('span', 'Products').should('be.visible');\ncy.get('#add-to-cart-sauce-labs-backpack').click();\ncy.contains('.shopping_cart_badge', '1').should('be.visible');\ncy.get('a[class=\"shopping_cart_link\"]').click();\ncy.contains('span', 'Your Cart').should('be.visible');\ncy.get('.checkout_button').click();\ncy.checkout('Maria Fernanda', 'Santos Bueno', '13348891');\ncy.contains('span', 'Checkout: Overview').should('be.visible');\ncy.get('#finish').click();\ncy.contains('span', 'Checkout: Complete!').should('be.visible');",
+              "err": {},
+              "uuid": "2292b6f2-9b00-4c78-ab64-ec4fea4d4ad1",
+              "parentUUID": "5802a519-0002-4a59-812e-378b2232117b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f58f2acb-ebda-4fdc-b633-5d19dabfb7c1",
+            "342d38e8-12c1-4ec8-9fa7-0918d5d3dddb",
+            "825306c9-6fe4-4549-b6de-3ed601114051",
+            "2292b6f2-9b00-4c78-ab64-ec4fea4d4ad1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6152,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
